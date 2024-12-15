@@ -1,47 +1,52 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  color: #333;
-  line-height: 1.6;
-}
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-
+/* Header */
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: #e8f4ff; /* Light blue */
+  color: #003366; /* Dark blue text */
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Lighter shadow */
 }
 
 header .logo {
-  font-size: 1.5em;
+  display: flex;
+  align-items: center; /* Align logo and text vertically */
+  gap: 10px; /* Space between logo and company name */
 }
 
+header .logo img {
+  max-width: 40px; /* Adjust logo size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+header .logo span {
+  font-size: 1.5em; /* Adjust the size of the company name */
+  font-weight: bold;
+  color: #fff; /* Match the text color with the header */
+}
+/* Hamburger Menu */
 header .hamburger {
-  display: none;
+  display: none; /* Hidden on larger screens */
   font-size: 1.5em;
   background: none;
   border: none;
   color: #fff;
   cursor: pointer;
+  z-index: 10; /* Ensure it's above the menu */
+  align-items: center;
+  gap: 5px; /* Space between "Menu" text and icon */
 }
 
+/* Navigation Menu */
 header .nav-menu {
-  display: flex;
+  display: flex; /* Default horizontal layout for desktop */
+  flex-direction: row;
 }
 
 header .nav-menu ul {
@@ -56,8 +61,45 @@ header .nav-menu ul li {
 }
 
 header .nav-menu ul li a {
-  color: #fff;
+  color: #003366;
   font-weight: bold;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  header .hamburger {
+    display: flex; /* Show hamburger on mobile devices */
+  }
+
+  header .nav-menu {
+    display: none; /* Hide the menu by default on mobile */
+    flex-direction: column;
+    background-color: #333;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    border-top: 2px solid #444;
+  }
+
+  header .nav-menu.active {
+    display: flex; /* Show menu when toggled */
+  }
+
+  header .nav-menu ul {
+    flex-direction: column; /* Stack menu items vertically */
+    padding: 10px 0;
+  }
+
+  header .nav-menu ul li {
+    margin: 10px 0;
+  }
+
+  header .nav-menu ul li a {
+    padding: 10px;
+    display: block;
+  }
 }
 
 .hero {
@@ -390,6 +432,7 @@ form button:hover {
 
 /* General Styles */
 body {
+  top: 60px;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
