@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>FlexPoint Services</title>
   <link rel="stylesheet" href="css/styles.css">
+  <!-- Font Awesome CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 <body>
+  <!-- Header -->
   <header>
     <div class="logo">FlexPoint Services</div>
     <button class="hamburger" aria-label="Toggle navigation">
@@ -14,54 +18,81 @@
     </button>
     <nav class="nav-menu">
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero" style="background-image: url('images/hero.jpg');">
+  <!-- Hero Section -->
+  <section id="home" class="hero" style="background-image: url('images/hero.jpg');">
     <div class="hero-content">
       <h1>FlexPoint Services</h1>
-      <p>At FlexPoint Services, we specialize in providing flexible, after-hours, and weekend tax preparation services tailored for individuals and small businesses. Our dedicated team ensures your financial needs are met with precision and care, right here in our community. Beyond taxes, we offer comprehensive tech support services, including hardware and software installation, IT system maintenance, network troubleshooting, and more, available both in-person and over the phone. Experience the convenience and expertise of FlexPoint Services today!</p>
-      <a href="services.html" class="cta-button">View Services</a>
-      <a href="contact.html#appointment" class="cta-button secondary">Get in Touch</a>
+      <p>
+        At FlexPoint Services, we specialize in providing **flexible**, **after-hours**, and **weekend services** tailored to your needs. Whether in-person, at our office, or over the phone, we’re here to offer reliable support whenever and wherever you need us.
+      </p>
+      <a href="#services" class="cta-button">View Services</a>
+      <a href="#contact" class="cta-button secondary">Get in Touch</a>
     </div>
   </section>
+  
 
-  <section class="services-overview">
+  <!-- Services Section -->
+  <section id="services" class="services-overview">
     <h2>Our Services</h2>
+    <p>
+      FlexPoint Services delivers **specialized, flexible solutions** designed to meet your needs with **after-hours and weekend availability**. Whether you prefer **in-person assistance**, visiting our office, or help over the phone, we ensure seamless and personalized support tailored to your schedule.
+    </p>
     <div class="service-item">
       <img src="images/tax-preparation.jpg" alt="Tax Preparation">
       <div class="service-description">
         <h3>Tax Preparation for Individuals</h3>
-        <p>Expert tax preparation services tailored for individuals, ensuring compliance and maximizing refunds.</p>
+        <p>Navigating personal taxes can be daunting, but FlexPoint Services is here to make the process seamless. Our dedicated team specializes in individual tax preparation, ensuring you receive maximum deductions and credits. We offer flexible scheduling, including after-hours and weekend appointments, to accommodate your busy lifestyle. Whether you need help with complicated filings or straightforward returns, our experts are equipped to handle it all. Trust us to deliver accurate, timely, and personalized service that takes the stress out of tax season.</p>
       </div>
     </div>
-    <div class="service-item">
+    <div class="service-item reverse">
       <img src="images/business-tax.jpg" alt="Business Tax Solutions">
       <div class="service-description">
         <h3>Small Business Tax Solutions</h3>
-        <p>Comprehensive tax services designed for small businesses, including planning and filing.</p>
+        <p>Small business owners face unique tax challenges, and FlexPoint Services is dedicated to providing tailored solutions that fit your specific needs. Our experienced professionals are adept at managing everything from quarterly filings to year-end tax returns. We prioritize your business's financial health, ensuring you capitalize on available deductions and credits. With flexible appointment options, including evenings and weekends, we work around your schedule to deliver exceptional service. Let us help you navigate the complexities of business taxes while you focus on growing your enterprise with confidence.</p>
       </div>
     </div>
     <div class="service-item">
       <img src="images/tech-support.jpg" alt="Tech Support Services">
       <div class="service-description">
         <h3>Tech Support Services</h3>
-        <p>Reliable tech support for hardware and software needs, available in-person or remotely.</p>
+        <p>In today’s digital age, having robust tech support is essential for both individuals and businesses. FlexPoint Services offers comprehensive tech support services, including hardware and software installation, IT system maintenance, and network troubleshooting. Our knowledgeable team is available for both in-person and remote assistance, ensuring you receive timely help whenever you need it. Whether you’re experiencing technical difficulties or need guidance on IT system upgrades, we provide efficient solutions that keep your operations running smoothly. Count on us to enhance your technology experience with top-notch support.</p>
       </div>
-    </div>
-    <div class="get-in-touch">
-      <h3>Ready to Get Started?</h3>
-      <p>Contact us today to schedule an appointment for the services you need!</p>
-      <a href="contact.html#appointment" class="cta-button">Get in Touch</a>
     </div>
   </section>
 
+  <!-- Contact Section -->
+  <section id="contact" class="contact-us">
+    <h1>Contact Us</h1>
+    <p>We’re committed to meeting your needs. Reach us via phone or email to get started.</p>
+    <div class="contact-info">
+      <div class="contact-item">
+        <span class="material-icons icon">phone</span>
+        <a href="tel:4697206629">469-720-6629</a></p>
+      </div>
+      <div class="contact-item">
+        <span class="material-icons icon">Email</span>
+        <a href="mailto:contact@flexpointservices.com">contact@flexpointservices.com</a></p>
+      </div>
+    </div>
+    <div class="business-hours">
+      <h2>Business Hours</h2>
+      <ul>
+        <li><strong>Monday – Friday:</strong> 4:00 PM – 10:00 PM</li>
+        <li><strong>Saturday – Sunday:</strong> 8:00 AM – 7:00 PM</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2024 Flex Tax & Tech Solutions. All rights reserved.</p>
+    <p>&copy; 2024 FlexPoint Services. All rights reserved.</p>
   </footer>
 
   <script src="js/scripts.js"></script>
