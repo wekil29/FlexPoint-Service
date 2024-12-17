@@ -217,6 +217,51 @@ header .hamburger {
   }
 }
 
+/* About Section */
+.about-me {
+  padding: 50px 20px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.about-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%; /* Circular photo */
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-description {
+  max-width: 600px;
+  text-align: left;
+  line-height: 1.8; /* Improved spacing */
+}
+
+.about-description h3 {
+  margin-bottom: 5px;
+  font-size: 1.8em;
+  color: #003366;
+}
+
+.about-description p {
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: #444; /* Slightly softer text color */
+}
+
+.about-description strong {
+  color: #007BFF; /* Highlighted keywords */
+}
+
 /* Contact Section */
 .contact-us {
   padding: 50px 20px;
