@@ -262,11 +262,39 @@ header .hamburger {
 .about-description p {
   font-size: 1.1em; /* Regular paragraph size */
   line-height: 1.8; /* Spacing for better readability */
-  color: #444; /* Softer text color */
+  color: #333; /* Softer text color */
 }
 
 .about-description strong {
   color: #007BFF; /* Highlighted keywords */
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 50px 20px;
+  background-color: #e8f4ff;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #003366;
+}
+
+.why-choose-us ul {
+  list-style: none;
+  padding: 0;
+}
+
+.why-choose-us li {
+  font-size: 1.2em;
+  margin: 10px 0;
+  color: #555;
+}
+
+.why-choose-us strong {
+  color: #007BFF;
 }
 
 /* Contact Section */
