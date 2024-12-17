@@ -360,3 +360,27 @@ footer p a:hover {
   color: #ffffff; /* White on hover for contrast */
   text-decoration: underline;
 }
+
+/* Scroll to Top Button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px; /* Position from the bottom */
+  right: 20px; /* Position from the right */
+  background-color: #007BFF; /* Button background color */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 50%; /* Circular button */
+  width: 50px;
+  height: 50px;
+  font-size: 1.5em;
+  cursor: pointer;
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.scroll-top-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}

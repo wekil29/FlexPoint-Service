@@ -13,4 +13,24 @@ document.addEventListener('DOMContentLoaded', () => {
       navMenu.classList.remove('active');
     }
   });
+
+    // Scroll to Top Button
+  const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+  // Show or hide the button when scrolling
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) { // Show when scrolled 300px down
+      scrollTopBtn.style.display = "flex";
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
+  });
+
+  // Scroll to the top smoothly when button is clicked
+  scrollTopBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth" // Smooth scroll effect
+    });
+  });
 });
