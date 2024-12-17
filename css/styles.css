@@ -247,15 +247,22 @@ header .hamburger {
 }
 
 .about-description h3 {
-  margin-bottom: 5px;
-  font-size: 1.8em;
-  color: #003366;
+  font-size: 1.5em; /* Slightly larger font size */
+  font-weight: bold; /* Make it bold */
+  margin-bottom: 10px; /* Spacing below the title */
+  color: #003366; /* Professional dark blue */
 }
-
+.about-description .title {
+  font-size: 1em; /* Slightly smaller than name */
+  font-weight: 400; /* Regular weight */
+  color: #666; /* Lighter gray for subtle contrast */
+  margin-top: 0; /* Remove unnecessary top spacing */
+  margin-bottom: 10px; /* Space before the paragraph */
+}
 .about-description p {
-  margin: 10px 0;
-  font-size: 1.1em;
-  color: #444; /* Slightly softer text color */
+  font-size: 1.1em; /* Regular paragraph size */
+  line-height: 1.8; /* Spacing for better readability */
+  color: #444; /* Softer text color */
 }
 
 .about-description strong {
