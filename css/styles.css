@@ -64,7 +64,7 @@ header .hamburger {
   font-size: 1.5em;
   background: none;
   border: none;
-  color: #003366;
+  color: #ffffff;
   cursor: pointer;
   z-index: 10; /* Ensure it's above the menu */
   align-items: center;
@@ -160,62 +160,58 @@ header .hamburger {
 }
 
 /* Service Section */
-/* Service Section */
 .services-overview {
   padding: 50px 20px;
-  background-color: #f9f9f9; /* Add a light background for better contrast */
+  background-color: #f9f9f9; /* Light background for contrast */
 }
 
 .service-item {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
-  border: 1px solid #ddd; /* Add a subtle border for each service item */
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for depth */
-  background-color: #fff; /* White background for the service item */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
-}
-
-.service-item:hover {
-  transform: translateY(-5px); /* Slightly lift the item on hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  background-color: #fff; /* White background for each service card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
+  border-radius: 8px; /* Rounded corners for modern look */
+  overflow: hidden; /* Ensures rounded corners affect child elements */
 }
 
 .service-item img {
-  width: 40%; /* Make the images smaller */
+  width: 40%; /* Slightly smaller images */
   height: auto;
-  border-radius: 8px;
-  object-fit: cover; /* Ensure the image scales properly */
-  margin-right: 20px; /* Add space between the image and text */
+  border-radius: 0; /* Reset border-radius for uniformity */
 }
 
 .service-description {
-  width: 60%;
-  padding: 0 20px; /* Adjust padding for better alignment */
+  width: 60%; /* Adjust proportion between text and image */
+  padding: 20px;
 }
 
 .service-description h3 {
-  font-size: 1.8em;
-  color: #0056b3; /* Add a brand color for the title */
+  font-size: 1.6em; /* Slightly larger for emphasis */
+  color: #0056b3; /* Attractive blue color */
   margin-bottom: 15px;
 }
 
 .service-description p {
-  font-size: 1em;
-  line-height: 1.6;
-  color: #666; /* Use a softer color for the text */
+  font-size: 1.1em;
+  color: #666; /* Softer gray for better readability */
+  line-height: 1.8; /* Slightly increased line height for clarity */
 }
 
-/* Reverse Layout for Alternating Items */
 .service-item.reverse {
-  flex-direction: row-reverse;
+  flex-direction: row-reverse; /* Keep reverse layout for desktop */
 }
 
-.service-item.reverse img {
-  margin-right: 0;
-  margin-left: 20px;
+/* Hover Effects */
+.service-item:hover {
+  transform: translateY(-5px); /* Subtle hover lift effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Stronger shadow on hover */
+}
+
+.service-item img:hover {
+  transform: scale(1.05); /* Slight zoom effect on image hover */
+  transition: transform 0.3s ease;
 }
 
 /* Responsive Design for Smaller Screens */
@@ -223,17 +219,29 @@ header .hamburger {
   .service-item {
     flex-direction: column;
     text-align: center;
-    padding: 20px;
+  }
+
+  .service-item.reverse {
+    flex-direction: column; /* Fix reversed items to stack vertically */
   }
 
   .service-item img {
-    width: 80%; /* Reduce the image size further for mobile devices */
-    margin: 0 auto 15px; /* Center the image and add margin below */
+    width: 80%; /* Reduce image width for better layout */
+    margin: 0 auto 20px; /* Center image with spacing below */
   }
 
   .service-description {
     width: 100%;
-    padding: 0;
+    padding: 10px 20px; /* Maintain padding for balanced text layout */
+  }
+
+  .service-description h3 {
+    font-size: 1.4em; /* Adjust heading size for smaller screens */
+  }
+
+  .service-description p {
+    font-size: 1em; /* Adjust paragraph size for better readability */
+    line-height: 1.6;
   }
 }
 
