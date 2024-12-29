@@ -32,14 +32,6 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Header Title (Logo) */
-header .logo {
-  font-size: 2em; /* Increase the font size */
-  font-weight: bold; /* Ensure it stands out */
-  color: #ffffff; /* Maintain the white color */
-  margin: 0; /* Reset margin for better alignment */
-}
-
 header .nav-menu {
   flex-grow: 1; /* Allow navigation menu to expand */
   display: flex;
