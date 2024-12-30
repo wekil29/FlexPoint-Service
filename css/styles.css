@@ -113,93 +113,124 @@ header .hamburger {
 
 /* Hero Section */
 .hero {
+  position: relative;
   text-align: center;
   padding: 50px 20px;
   background-size: cover;
   background-position: center;
   color: #fff;
+  height: 100vh;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero.jpg'); /* Added overlay gradient */
 }
 
 .hero-content {
-  background-color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional background for content */
   padding: 20px;
   border-radius: 10px;
+  display: inline-block;
 }
 
-.hero h1 {
-  font-size: 2.5em;
-  margin: 0 0 20px;
-}
-
-.hero p {
-  font-size: 1.2em;
-  margin: 0 0 20px;
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)); /* Additional overlay for a smoother gradient */
 }
 
 .cta-button {
   display: inline-block;
-  background-color: #007BFF;
+  background-color: #007BFF; /* Primary blue */
   color: #fff;
   padding: 10px 20px;
-  border-radius: 5px;
+  border-radius: 30px; /* Rounded corners */
   font-weight: bold;
   text-decoration: none;
   margin-top: 15px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Darker blue on hover */
+  transform: translateY(-3px); /* Slight upward movement */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
 }
 
 .cta-button.secondary {
-  background-color: #28a745;
+  background-color: #28a745; /* Secondary green */
 }
 
 .cta-button.secondary:hover {
-  background-color: #218838;
+  background-color: #218838; /* Darker green on hover */
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 30px 15px;
+    height: auto; /* Adjust height for smaller screens */
+  }
+
+  .cta-button {
+    font-size: 0.9em; /* Slightly smaller buttons */
+    padding: 8px 15px; /* Adjust padding */
+    width: 100%; /* Full-width buttons for mobile */
+    box-sizing: border-box;
+  }
+
+  .hero-content {
+    padding: 15px;
+  }
+}
+
 
 /* Service Section */
 .services-overview {
   padding: 50px 20px;
-  background-color: #f9f9f9; /* Light background for contrast */
 }
 
 .service-item {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
-  background-color: #fff; /* White background for each service card */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow for depth */
-  border-radius: 8px; /* Rounded corners for modern look */
-  overflow: hidden; /* Ensures rounded corners affect child elements */
 }
 
 .service-item img {
-  width: 40%; /* Slightly smaller images */
+  width: 45%; /* Slightly smaller */
   height: auto;
-  border-radius: 0; /* Reset border-radius for uniformity */
+  border-radius: 10px; /* Rounder corners */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .service-description {
-  width: 60%; /* Adjust proportion between text and image */
+  width: 50%;
   padding: 20px;
+  text-align: left;
 }
 
 .service-description h3 {
-  font-size: 1.6em; /* Slightly larger for emphasis */
-  color: #0056b3; /* Attractive blue color */
-  margin-bottom: 15px;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #0056b3; /* Highlighted titles */
 }
 
 .service-description p {
   font-size: 1.1em;
-  color: #666; /* Softer gray for better readability */
-  line-height: 1.8; /* Slightly increased line height for clarity */
+  line-height: 1.6;
+}
+
+.service-description p span {
+  font-weight: bold;
+  color: #007BFF; /* Highlight keywords in blue */
 }
 
 .service-item.reverse {
-  flex-direction: row-reverse; /* Keep reverse layout for desktop */
+  flex-direction: row-reverse;
 }
 
 /* Hover Effects */
@@ -262,11 +293,13 @@ header .hamburger {
 }
 
 .about-photo {
-  width: 180px;
-  height: 180px;
-  border-radius: 50%; /* Circular photo */
+  border-radius: 50%; /* Circle shape */
+  border: 4px solid #007BFF; /* Blue border */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+  width: 150px; /* Adjust size */
+  height: 150px; /* Ensure consistent aspect ratio */
   object-fit: cover;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Add spacing */
 }
 
 .about-description {
@@ -301,26 +334,37 @@ header .hamburger {
 /* Why Choose Us Section */
 .why-choose-us {
   padding: 50px 20px;
-  background-color: #e8f4ff;
   text-align: center;
+  background-color: #f9f9f9;
 }
 
 .why-choose-us h2 {
-  font-size: 2.5em;
+  font-size: 2em;
   margin-bottom: 20px;
-  color: #003366;
+  color: #0056b3;
 }
 
 .why-choose-us ul {
   list-style: none;
   padding: 0;
+  margin: 0 auto;
+  max-width: 600px;
 }
 
-.why-choose-us li {
+.why-choose-us ul li {
   font-size: 1.2em;
-  margin: 10px 0;
-  color: #555;
+  margin: 15px 0; /* Increase spacing */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-align: left;
 }
+
+.why-choose-us ul li i {
+  font-size: 1.5em;
+  color: #007BFF; /* Icon color */
+}
+
 
 .why-choose-us strong {
   color: #007BFF;
