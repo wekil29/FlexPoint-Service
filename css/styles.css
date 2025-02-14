@@ -190,40 +190,66 @@ header .hamburger {
 }
 
 
-/* Service Section */
+/* Services Section */
 .services-overview {
   padding: 50px 20px;
+  text-align: center;
+}
+
+.service-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .service-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .service-item img {
-  width: 45%; /* Slightly smaller */
+  width: 100%;
+  border-radius: 10px;
   height: auto;
-  border-radius: 10px; /* Rounder corners */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin-bottom: 10px;
 }
 
 .service-description {
-  width: 50%;
-  padding: 20px;
-  text-align: left;
+  text-align: center;
 }
 
 .service-description h3 {
-  font-size: 1.5em;
-  margin-bottom: 10px;
-  color: #0056b3; /* Highlighted titles */
+  font-size: 1.4em;
+  color: #003366;
 }
 
 .service-description p {
   font-size: 1.1em;
+  color: #666;
   line-height: 1.6;
 }
+
+/* Interactive Highlight Effect */
+.service-item.active {
+  background-color: #003366;
+  color: #ffffff;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.service-item.active h3 {
+  color: #ffffff;
+}
+
 
 .service-description p span {
   font-weight: bold;
