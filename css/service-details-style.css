@@ -1,0 +1,41 @@
+@import url('../css/styles.css');
+
+/* --- Service Details Page Overrides --- */
+
+/* Override the hero section to remove background image and make it cleaner */
+.hero {
+  background: #f1f1f1; /* Light background instead of image */
+  height: auto;
+  padding: 80px 20px 40px;
+  color: #003366;
+  background-image: none;
+}
+
+.hero-content {
+  background-color: transparent;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  color: inherit;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #444;
+}
+
+/* Optional: reduce height of CTA buttons */
+.cta-button, .cta-button.secondary {
+  padding: 8px 18px;
+  font-size: 0.95em;
+}
+
