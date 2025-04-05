@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FlexPoint Services offers flexible tax and tech solutions, specializing in after-hours and weekend services for individuals and small businesses.">
+  <meta name="description" content="Expert tax preparation & IT support for small businesses. Available after-hours & weekends. Get reliable, flexible services tailored to your needs!">
   <meta name="keywords" content="tax preparation, tech support, small business services, flexible services, IT support">
   <meta name="author" content="FlexPoint Services">
   <meta name="robots" content="index, follow">
-  <title>FlexPoint Services | Flexible Tax & Tech Solutions in Dallas</title>
+  <title>FlexPoint Services | Tax Preparation & IT Support for Small Businesses</title>
   <link rel="stylesheet" href="css/styles.css">
   <link rel="canonical" href="https://flexpointservices.com/">
   <!-- Font Awesome CDN -->
@@ -19,7 +19,7 @@
       "name": "FlexPoint Services",
       "url": "https://www.flexpointservices.com/",
       "logo": "https://www.flexpointservices.com/images/logo.png",
-      "description": "Providing flexible, after-hours, and weekend tax preparation and tech support services.",
+      "description": "FlexPoint Services offers expert tax preparation & IT support for small businesses. Available after-hours & weekends.",
       "priceRange": "$$",
       "address": {
         "@type": "PostalAddress",
@@ -81,57 +81,82 @@
 
   <!-- Scroll Wrapper -->
   <div class="service-wrapper">
+    <!-- Left Scroll Button -->
+    <button class="scroll-button left" onclick="scrollServices('left')">&#9664;</button>
+
     <div class="service-container">
       <div class="service-item" onclick="highlightService(this)">
-        <img src="images/tax-preparation.jpg" alt="Tax Preparation">
+        <a href="pages/tax-preparation.html">
+          <img src="images/tax-preparation.jpg" alt="Tax Preparation">
+        </a>
         <div class="service-description">
-          <h3>Tax Preparation</h3>
+          <h3><a href="tax-preparation.html">Tax Preparation</a></h3>
           <p>We make tax filing easy by offering personalized tax preparation services for individuals and businesses.</p>
+          <a href="pages/tax-preparation.html" class="cta-button">View Details</a>
         </div>
       </div>
+      
 
       <div class="service-item" onclick="highlightService(this)">
-        <img src="images/it-consultation.jpg" alt="Tech Support">
+        <a href="pages/tech-support.html">
+          <img src="images/it-consultation.jpg" alt="IT Consulting & Tech Support">
+        </a>
         <div class="service-description">
           <h3>IT Consulting & Tech Support</h3>
           <p>Comprehensive IT consulting and support solutions tailored for businesses and individuals.</p>
+          <a href="pages/tech-support.html" class="cta-button">View Details</a>
         </div>
       </div>
 
       <!-- New Service: Bookkeeping -->
       <div class="service-item" onclick="highlightService(this)">
-        <img src="images/book-keeping.jpg" alt="Bookkeeping Services">
+        <a href="pages/bookkeeping.html">
+          <img src="images/book-keeping.jpg" alt="Bookkeeping Services">
+        </a>
         <div class="service-description">
           <h3>Bookkeeping Services</h3>
           <p>Accurate record-keeping and financial tracking for businesses to maintain compliance and efficiency.</p>
+          <a href="pages/bookkeeping.html" class="cta-button">View Details</a>
         </div>
       </div>
 
       <!-- New Service: Healthcare Enrollment (Seasonal) -->
       <div class="service-item" onclick="highlightService(this)">
-        <img src="images/healthcare-enrollment.jpg" alt="Healthcare Enrollment">
+        <a href="pages/healthcare-enrollment.html">
+          <img src="images/healthcare-enrollment.jpg" alt="Healthcare Enrollment">
+        </a>
         <div class="service-description">
           <h3>Healthcare Enrollment</h3>
           <p>We help you enroll in healthcare plans, including Obamacare and Medicaid, at no cost to you.</p>
+          <a href="pages/healthcare-enrollment.html" class="cta-button">View Details</a>
         </div>
       </div>
 
       <div class="service-item" onclick="highlightService(this)">
-        <img src="images/immigration-services.jpg" alt="Immigration Services">
+        <a href="pages/immigration.html">
+          <img src="images/immigration-services.jpg" alt="Immigration Services">
+        </a>
         <div class="service-description">
           <h3>Immigration Services</h3>
           <p>Expert guidance for immigration documentation, visa applications, and legal procedures.</p>
+          <a href="pages/immigration.html" class="cta-button">View Details</a>
         </div>
       </div>
 
       <div class="service-item" onclick="highlightService(this)">
-        <img src="images/retirement-planning.jpg" alt="Retirement Planning">
+        <a href="pages/retirement-planning.html">
+          <img src="images/retirement-planning.jpg" alt="Retirement & Financial Planning">
+        </a>
         <div class="service-description">
           <h3>Retirement & Financial Planning</h3>
           <p>We provide financial planning strategies to help you secure a stable and comfortable future.</p>
+          <a href="pages/retirement-planning.html" class="cta-button">View Details</a>
         </div>
       </div>
     </div>
+
+    <!-- Right Scroll Button -->
+    <button class="scroll-button right" onclick="scrollServices('right')">&#9654;</button>
   </div>
 </section>
 

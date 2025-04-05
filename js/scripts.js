@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-    // Scroll to Top Button
+  // Scroll to Top Button
   const scrollTopBtn = document.getElementById("scrollTopBtn");
 
   // Show or hide the button when scrolling
@@ -33,4 +33,25 @@ document.addEventListener('DOMContentLoaded', () => {
       behavior: "smooth" // Smooth scroll effect
     });
   });
+
+  // Add Smooth Scrolling for Services Section
+  function scrollServices(direction) {
+    const container = document.querySelector(".service-container");
+    const scrollAmount = 350; // Adjust scroll speed
+
+    if (direction === "left") {
+      container.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    } else {
+      container.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    }
+  }
+
+  // Add Event Listeners for Scroll Buttons
+  const leftScrollBtn = document.querySelector(".scroll-button.left");
+  const rightScrollBtn = document.querySelector(".scroll-button.right");
+
+  if (leftScrollBtn && rightScrollBtn) {
+    leftScrollBtn.addEventListener("click", () => scrollServices("left"));
+    rightScrollBtn.addEventListener("click", () => scrollServices("right"));
+  }
 });

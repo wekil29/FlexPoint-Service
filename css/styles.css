@@ -260,6 +260,38 @@ header .hamburger {
   line-height: 1.6;
 }
 
+/* Scroll Buttons */
+.scroll-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 123, 255, 0.8); /* Semi-transparent blue */
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-button:hover {
+  background-color: rgba(0, 123, 255, 1); /* Fully opaque on hover */
+}
+
+.scroll-button.left {
+  left: -10px; /* Position left button */
+}
+
+.scroll-button.right {
+  right: -10px; /* Position right button */
+}
+
 /* Interactive Highlight Effect */
 .service-item.active {
   background-color: #003366;
