@@ -403,6 +403,46 @@ header .hamburger {
   color: #007BFF;
 }
 
+/* Community Impact Section (Aligned Layout) */
+.community-focus {
+  background-color: #f5fafd;
+  padding: 50px 20px;
+  margin: 0 auto;
+  text-align: center;
+  border-top: 1px dashed rgba(0, 0, 0, 0.05); /* subtle divider */
+}
+
+.community-focus h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #0056b3;
+}
+
+.community-focus p {
+  font-size: 1.1em;
+  color: #333;
+  margin: 0 auto 20px;
+  max-width: 800px;
+  line-height: 1.8;
+}
+
+.community-focus ul {
+  list-style-type: disc;
+  margin: 0 auto 20px;
+  padding-left: 40px;
+  text-align: left;
+  max-width: 800px;
+  color: #333;
+  font-size: 1.1em;
+}
+
+.community-focus em {
+  display: block;
+  font-style: italic;
+  margin-top: 20px;
+  color: #555;
+}
+
 /* Contact Section */
 .contact-us {
   padding: 50px 20px;
@@ -524,4 +564,44 @@ footer p a:hover {
   background-color: #0056b3; /* Darker blue on hover */
 }
 
+.waitlist-details {
+  margin: 40px auto;
+  width: 90%;           /* span nearly the full viewport */
+  max-width: 1000px;    /* but never wider than this */
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
+.waitlist-details summary {
+  list-style: none;
+  cursor: pointer;
+  background: #0056b3;
+  color: #fff;
+  padding: 15px 20px;
+  font-size: 1.2em;
+  position: relative;
+}
+
+.waitlist-details summary::after {
+  content: "▾";
+  position: absolute;
+  right: 20px;
+  transition: transform .2s ease;
+}
+
+.waitlist-details[open] summary::after {
+  transform: rotate(-180deg);
+}
+
+.waitlist-details .form-container {
+  background: #f9f9f9;
+  padding: 20px;
+}
+
+.waitlist-details .form-container iframe {
+  width: 100%;
+  height: 100vh; /* make it tall enough to show all questions */
+  border: none;
+}
