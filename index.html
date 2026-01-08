@@ -42,6 +42,13 @@
 </head>
 <body>
    <!-- Header -->
+   <div class="seasonal-bar" role="region" aria-label="Seasonal announcement">
+    <div class="seasonal-bar-inner">
+      <strong>2025 Taxes.</strong> Upload your documents online and save time.
+      <a class="seasonal-bar-link" href="#tax-upload" id="taxUploadLink">Start online</a>
+    </div>
+  </div>  
+  
    <header>
     <div class="logo">
       <a href="index.html">
@@ -71,6 +78,9 @@
       </p>
       <a href="#services" class="cta-button">View Services</a>
       <a href="#contact" class="cta-button secondary">Get in Touch</a>
+      <!-- ✅ ADD: Hero button to open the tax modal -->
+      <a href="#" class="cta-button" id="openTaxModal">Start 2025 Taxes Online</a>
+      
     </div>
   </section>
 
@@ -89,7 +99,33 @@
     </div>
   </details> -->
 
-  
+   <!-- ✅ ADD: Compact seasonal card (small vertical space) -->
+   <section id="tax-upload" class="seasonal-tax-card" aria-label="2025 tax online intake">
+    <div class="seasonal-tax-card-inner">
+      <div>
+        <h3>2025 Tax Preparation. Start Online</h3>
+        <div class="tax-cue" aria-hidden="true">
+          <span class="tax-cue-text">Tap “Upload now”</span>
+          <span class="tax-cue-arrow">↓</span>
+        </div>
+        <p>
+          Upload your documents ahead of time so we can review your 2025 return before your visit.
+          This reduces appointment time and prevents missing paperwork.
+        </p>
+        <ul>
+          <li>What to upload. W-2, 1099, ID</li>
+          <li>Why we request it. IRS requires proof of income and certain credits</li>
+          <li>Privacy. Reviewed only by authorized FlexPoint Services staff</li>
+        </ul>
+      </div>
+
+      <div class="seasonal-tax-card-actions">
+        <button class="cta-button" id="openTaxModal2" type="button">Upload now</button>
+        <a class="cta-button secondary" href="pages/tax-preparation.html">View details</a>
+      </div>
+    </div>
+  </section>
+
 <!-- Services Section -->
 <section id="services" class="services-overview">
   <h2>Our Services</h2>
@@ -317,6 +353,28 @@
   <button id="scrollTopBtn" class="scroll-top-btn" aria-label="Scroll to Top">
     &#8679; <!-- Up Arrow Icon -->
   </button>
+
+  <!-- ✅ ADD: Modal markup near end of body (outside sections) -->
+  <div class="modal" id="taxModal" aria-hidden="true" role="dialog" aria-label="2025 tax intake form">
+    <div class="modal-backdrop" data-close="true"></div>
+
+    <div class="modal-panel" role="document">
+      <div class="modal-header">
+        <h3>Secure 2025 Tax Intake and Document Upload</h3>
+        <button class="modal-close" type="button" data-close="true" aria-label="Close">×</button>
+      </div>
+
+      <div class="modal-body">
+        <iframe
+          src="https://docs.google.com/forms/d/e/1FAIpQLSdF09WtdIc505e-d7MVSvKgiw47nQIvn5aW4ZEXGGJcZqo1Qg/viewform?embedded=true"
+          title="FlexPoint Services 2025 Tax Intake Form"
+          loading="lazy"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+
+  
   <script src="js/scripts.js"></script>
   <!-- <script src="//embed.typeform.com/next/embed.js"></script> -->
 
