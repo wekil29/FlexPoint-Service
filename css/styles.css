@@ -953,3 +953,34 @@ html {
 @media (prefers-reduced-motion: reduce){
   .tax-cue-arrow{ animation: none; }
 }
+/* Footer social links */
+.footer-social{
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+.footer-social a{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.18);
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 150ms ease, background 150ms ease, opacity 150ms ease;
+}
+
+.footer-social a:hover{
+  transform: translateY(-2px);
+  background: rgba(255,255,255,0.18);
+  opacity: 0.95;
+}
+
+.footer-social i{
+  font-size: 18px;
+}
