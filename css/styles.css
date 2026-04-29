@@ -770,6 +770,18 @@ header .nav-menu ul li a {
   transition: background 160ms ease, color 160ms ease;
 }
 
+header .nav-menu ul li a.nav-cta {
+  background: #ffffff;
+  color: var(--fp-navy);
+  padding-inline: 16px;
+}
+
+header .nav-menu ul li a.nav-cta:hover,
+header .nav-menu ul li a.nav-cta:focus-visible {
+  background: #ffd36a;
+  color: #1f2d35;
+}
+
 header .nav-menu ul li a:hover,
 header .nav-menu ul li a:focus-visible {
   background: rgba(255, 255, 255, 0.14);
@@ -902,6 +914,209 @@ header .nav-menu ul li a:focus-visible {
   font-size: 0.86rem;
   font-weight: 700;
   padding: 8px 10px;
+}
+
+@media (min-width: 1024px) {
+  body {
+    padding-top: 76px;
+  }
+
+  section {
+    scroll-margin-top: 96px;
+  }
+
+  header {
+    min-height: 76px;
+    padding: 10px clamp(34px, 5vw, 72px);
+  }
+
+  header .logo img {
+    height: 58px;
+  }
+
+  header .nav-menu ul {
+    gap: 8px;
+  }
+
+  header .nav-menu ul li a {
+    padding: 11px 14px;
+    font-size: 1.04rem;
+  }
+
+  .hero {
+    min-height: min(760px, calc(100svh - 76px));
+    padding: clamp(72px, 8vw, 112px) clamp(56px, 8vw, 118px);
+  }
+
+  .hero::before {
+    background:
+      linear-gradient(90deg, rgba(5, 20, 34, 0.9) 0%, rgba(5, 20, 34, 0.72) 44%, rgba(5, 20, 34, 0.2) 100%),
+      linear-gradient(180deg, rgba(5, 20, 34, 0.08), rgba(5, 20, 34, 0.56));
+  }
+
+  .hero-content {
+    max-width: 840px;
+  }
+
+  .hero-content h1 {
+    max-width: 820px;
+    font-size: clamp(4.2rem, 5.6vw, 5.6rem);
+    line-height: 1;
+    margin-bottom: 22px;
+  }
+
+  .hero-content p {
+    max-width: 760px;
+    font-size: 1.28rem;
+    line-height: 1.7;
+  }
+
+  .hero .eyebrow {
+    max-width: 760px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .hero-actions {
+    gap: 14px;
+    margin-top: 28px;
+  }
+
+  .cta-button {
+    min-height: 52px;
+    padding: 14px 22px;
+    font-size: 1.05rem;
+  }
+
+  .hero-proof {
+    gap: 12px;
+    margin-top: 26px;
+  }
+
+  .hero-proof span {
+    font-size: 0.98rem;
+    padding: 10px 14px;
+  }
+
+  .services-overview,
+  .process-section,
+  .about-me,
+  .why-choose-us,
+  .partners,
+  .community-focus,
+  .contact-us,
+  .quick-help-section {
+    padding: 86px clamp(48px, 6vw, 92px);
+  }
+
+  .services-overview > h2,
+  .process-section > h2,
+  .quick-help-section > h2,
+  .about-me > h2,
+  .why-choose-us > h2,
+  .partners > h2,
+  .community-focus > h2,
+  .contact-us > h1 {
+    max-width: 960px;
+    font-size: clamp(3.1rem, 4vw, 4.2rem);
+    margin-bottom: 18px;
+  }
+
+  .services-overview > p,
+  .process-section > p,
+  .quick-help-section > p,
+  .contact-us > p,
+  .about-intro {
+    max-width: 900px;
+    font-size: 1.22rem;
+    line-height: 1.75;
+  }
+
+  .section-kicker,
+  .service-tag {
+    font-size: 0.9rem;
+  }
+
+  .quick-help-grid,
+  .process-grid {
+    max-width: 1200px;
+    gap: 24px;
+    margin-top: 38px;
+  }
+
+  .quick-help-card,
+  .process-card {
+    padding: 30px;
+  }
+
+  .quick-help-card .material-icons {
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+  }
+
+  .quick-help-card h3,
+  .process-card h3 {
+    font-size: 1.48rem;
+    line-height: 1.18;
+  }
+
+  .quick-help-card p,
+  .process-card p {
+    font-size: 1.08rem;
+    line-height: 1.65;
+  }
+
+  .quick-help-card a {
+    font-size: 1.04rem;
+  }
+
+  .service-wrapper {
+    max-width: 1240px;
+    margin-top: 40px;
+  }
+
+  .service-container {
+    gap: 26px;
+  }
+
+  .service-item img {
+    height: 220px;
+  }
+
+  .service-description {
+    padding: 26px;
+  }
+
+  .service-description h3 {
+    font-size: 1.5rem;
+  }
+
+  .service-description p {
+    font-size: 1.05rem;
+    line-height: 1.65;
+  }
+
+  .why-choose-us ul {
+    max-width: 1200px;
+    gap: 18px;
+  }
+
+  .why-choose-us ul li {
+    font-size: 1.05rem;
+    line-height: 1.55;
+    padding: 24px;
+  }
+
+  .contact-info {
+    max-width: 1080px;
+    gap: 18px;
+  }
+
+  .contact-item {
+    padding: 20px;
+    font-size: 1.08rem;
+  }
 }
 
 .services-overview,
@@ -1401,5 +1616,192 @@ footer {
     transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+  }
+}
+
+/* Final desktop polish. Keep this after the base/mobile rules so it wins. */
+@media (min-width: 1024px) {
+  .hero {
+    min-height: clamp(540px, 58svh, 620px);
+    padding: 56px clamp(48px, 7vw, 96px);
+  }
+
+  .hero-content h1 {
+    max-width: 760px;
+    font-size: clamp(3.2rem, 4.25vw, 4.05rem);
+    line-height: 1.04;
+  }
+
+  .hero-content p {
+    max-width: 700px;
+    font-size: 1.14rem;
+    line-height: 1.65;
+  }
+
+  .hero .eyebrow {
+    font-size: 0.9rem;
+  }
+
+  .hero-actions {
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .cta-button {
+    min-height: 48px;
+    padding: 12px 20px;
+    font-size: 1rem;
+  }
+
+  .hero-proof {
+    margin-top: 22px;
+  }
+
+  .hero-proof span {
+    font-size: 0.92rem;
+    padding: 9px 12px;
+  }
+
+  .services-overview,
+  .process-section,
+  .about-me,
+  .why-choose-us,
+  .partners,
+  .community-focus,
+  .contact-us,
+  .quick-help-section {
+    padding: 72px clamp(44px, 5.5vw, 84px);
+  }
+
+  .services-overview > h2,
+  .process-section > h2,
+  .quick-help-section > h2,
+  .about-me > h2,
+  .why-choose-us > h2,
+  .partners > h2,
+  .community-focus > h2,
+  .contact-us > h1 {
+    max-width: 980px;
+    font-size: clamp(2.45rem, 3vw, 3.05rem);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .quick-help-section > h2 {
+    max-width: 1180px;
+  }
+
+  .services-overview > p,
+  .process-section > p,
+  .quick-help-section > p,
+  .contact-us > p,
+  .about-intro {
+    max-width: 860px;
+    font-size: 1.12rem;
+    line-height: 1.7;
+  }
+
+  .section-kicker,
+  .service-tag {
+    font-size: 0.82rem;
+  }
+
+  .quick-help-grid,
+  .process-grid {
+    max-width: 1180px;
+    gap: 22px;
+    margin-top: 34px;
+  }
+
+  .quick-help-card,
+  .process-card {
+    padding: 26px;
+  }
+
+  .quick-help-card .material-icons {
+    width: 52px;
+    height: 52px;
+    font-size: 28px;
+  }
+
+  .quick-help-card h3,
+  .process-card h3 {
+    font-size: 1.32rem;
+    line-height: 1.22;
+  }
+
+  .quick-help-card p,
+  .process-card p {
+    font-size: 1.02rem;
+    line-height: 1.62;
+  }
+
+  .quick-help-card a {
+    font-size: 1rem;
+  }
+
+  .service-wrapper {
+    max-width: 1200px;
+    margin-top: 36px;
+  }
+
+  .service-container {
+    gap: 22px;
+  }
+
+  .service-item img {
+    height: 205px;
+  }
+
+  .service-description {
+    padding: 24px;
+  }
+
+  .service-description h3 {
+    font-size: 1.34rem;
+    line-height: 1.22;
+  }
+
+  .service-description p {
+    font-size: 1rem;
+    line-height: 1.62;
+  }
+
+  .why-choose-us ul {
+    max-width: 1180px;
+    gap: 16px;
+  }
+
+  .why-choose-us ul li {
+    font-size: 1rem;
+    line-height: 1.55;
+    padding: 22px;
+  }
+
+  .about-container {
+    max-width: 1040px;
+    padding: 26px;
+  }
+
+  .about-description {
+    max-width: 760px;
+  }
+
+  .about-description h3 {
+    font-size: 1.55rem;
+  }
+
+  .about-description p {
+    font-size: 1.02rem;
+  }
+
+  .contact-info {
+    max-width: 1100px;
+    gap: 20px;
+  }
+
+  .contact-item {
+    padding: 18px;
+    font-size: 1.02rem;
   }
 }
