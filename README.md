@@ -15,7 +15,7 @@ Then open <http://localhost:8000>. Service detail pages are under `pages/`.
 ## Site structure
 
 - `index.html` — homepage and service overview
-- `pages/` — tax preparation, bookkeeping, financial education, technology support, healthcare enrollment, and immigration form assistance
+- `pages/` — tax preparation, bookkeeping, financial education, technology support, healthcare enrollment, immigration form assistance, and insurance availability
 - `css/` and `js/` — shared responsive styles and navigation behavior
 - `images/` — logo and site imagery
 
