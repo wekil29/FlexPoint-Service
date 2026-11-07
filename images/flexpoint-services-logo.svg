@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1365 471" role="img" aria-labelledby="title">
+  <title id="title">FlexPoint Services</title>
+  <g fill="#0a2d59">
+    <path d="M100 0h310l-87 92H109L0 202V100z"/>
+    <path d="M0 255h115v98L0 471z"/>
+  </g>
+  <path fill="#08a9e8" d="M124 126h240l-91 94H31z"/>
+  <text x="440" y="220" fill="#0a2d59" font-family="Arial, Helvetica, sans-serif" font-size="230" font-weight="700" letter-spacing="-5" textLength="920" lengthAdjust="spacingAndGlyphs">FlexPoint</text>
+  <text x="440" y="401" fill="#08a9e8" font-family="Arial, Helvetica, sans-serif" font-size="198" font-weight="400" letter-spacing="-5" textLength="670" lengthAdjust="spacingAndGlyphs">Services</text>
+</svg>
