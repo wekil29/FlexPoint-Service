@@ -1140,16 +1140,6 @@ select {
   text-underline-offset: 3px;
 }
 
-.contact-privacy-note {
-  margin: 12px 0 0;
-  border-radius: 8px;
-  background: #f2f7fa;
-  color: #5a6b7d;
-  font-size: 0.76rem;
-  line-height: 1.55;
-  padding: 11px 13px;
-}
-
 .site-footer {
   background: #061d38;
   color: rgba(255, 255, 255, 0.75);
