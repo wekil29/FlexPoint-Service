@@ -1,37 +1,47 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const hamburger = document.querySelector('.hamburger');
-  const navMenu = document.querySelector('.nav-menu');
+  const menuButton = document.querySelector('.menu-toggle');
+  const siteNav = document.querySelector('.site-nav');
 
-  if (hamburger && navMenu) {
-    hamburger.addEventListener('click', (event) => {
-      event.stopPropagation();
-      navMenu.classList.toggle('active');
-    });
+  if (!menuButton || !siteNav) return;
 
-    document.addEventListener('click', (event) => {
-      if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
-        navMenu.classList.remove('active');
-      }
-    });
+  const closeMenu = () => {
+    menuButton.setAttribute('aria-expanded', 'false');
+    menuButton.setAttribute('aria-label', 'Open navigation menu');
+    siteNav.classList.remove('is-open');
+  };
 
-    navMenu.addEventListener('click', (event) => {
-      if (event.target.closest('a')) {
-        navMenu.classList.remove('active');
-      }
-    });
-  }
+  menuButton.addEventListener('click', () => {
+    const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+    menuButton.setAttribute('aria-expanded', String(!isOpen));
+    menuButton.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
+    siteNav.classList.toggle('is-open', !isOpen);
+  });
 
-  const scrollTopBtn = document.getElementById('scrollTopBtn');
-  if (scrollTopBtn) {
-    window.addEventListener('scroll', () => {
-      scrollTopBtn.style.display = window.scrollY > 300 ? 'flex' : 'none';
-    });
+  siteNav.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', closeMenu);
+  });
 
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
+  document.addEventListener('click', (event) => {
+    if (!siteNav.contains(event.target) && !menuButton.contains(event.target)) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menuButton.getAttribute('aria-expanded') === 'true') {
+      closeMenu();
+      menuButton.focus();
+    }
+  });
+
+  const desktopNav = window.matchMedia('(min-width: 981px)');
+  const handleNavResize = (event) => {
+    if (event.matches) closeMenu();
+  };
+
+  if (desktopNav.addEventListener) {
+    desktopNav.addEventListener('change', handleNavResize);
+  } else {
+    desktopNav.addListener(handleNavResize);
   }
 });

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.flexpointservices.com/sitemap.xml
+Sitemap: https://flexpointservices.com/sitemap.xml
